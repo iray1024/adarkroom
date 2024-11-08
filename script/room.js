@@ -1046,10 +1046,10 @@ var Room = {
 			case 'weapon':
 			case 'upgrade':
 			case 'tool':
-				$SM.add('stores["' + thing + '"]', 1);
+				$SM.add('stores["' + thing + '"]', 100);
 				break;
 			case 'building':
-				$SM.add('game.buildings["' + thing + '"]', 1);
+				$SM.add('game.buildings["' + thing + '"]', 100);
 				break;
 		}
 
