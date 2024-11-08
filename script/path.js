@@ -71,15 +71,15 @@ var Path = {
 	
 	getCapacity: function() {
 		if($SM.get('stores["cargo drone"]', true) > 0) {
-			return Path.DEFAULT_BAG_SPACE + 100 + 1890;
+			return Path.DEFAULT_BAG_SPACE + 100 + 18900;
 		} else if($SM.get('stores.convoy', true) > 0) {
-			return Path.DEFAULT_BAG_SPACE + 60 + 1930;
+			return Path.DEFAULT_BAG_SPACE + 60 + 19300;
 		} else if($SM.get('stores.wagon', true) > 0) {
-			return Path.DEFAULT_BAG_SPACE + 30 + 1960;
+			return Path.DEFAULT_BAG_SPACE + 30 + 19600;
 		} else if($SM.get('stores.rucksack', true) > 0) {
-			return Path.DEFAULT_BAG_SPACE + 10 + 1980;
+			return Path.DEFAULT_BAG_SPACE + 10 + 19800;
 		}
-		return Path.DEFAULT_BAG_SPACE + 1990;
+		return Path.DEFAULT_BAG_SPACE + 19900;
 	},
 	
 	getFreeSpace: function() {

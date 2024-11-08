@@ -421,7 +421,9 @@ var Events = {
 				Button.setDisabled(btn, true);
 			}
 
-			var hp = World.health + cured * 1000;
+			cured *= 1000;
+			
+			var hp = World.health + cured;
 			hp = Math.min(World.getMaxHealth(),hp);
 			World.setHp(hp);
 			Events.setHeal();
