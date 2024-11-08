@@ -596,7 +596,7 @@ var World = {
   },
 
   getDamage: function(thing) {
-    return World.Weapons[thing].damage;
+    return World.Weapons[thing].damage * 100;
   },
 
   narrateMove: function(oldTile, newTile) {
