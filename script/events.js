@@ -618,6 +618,7 @@ var Events = {
 		const energised = fighter.data('status') === 'energised';
 		const venomous = fighter.data('status') === 'venomous';
 		const meditating = enemy.data('status') === 'meditation';
+
 		if(typeof dmg == 'number') {
 			if(dmg < 0) {
 				msg = _('miss');
@@ -625,6 +626,10 @@ var Events = {
 			} else {
 				if (energised) {
 					dmg *= this.ENERGISE_MULTIPLIER;
+				}
+
+				if (fighter.selector === '#wanderer'){
+					dmg *= 100;
 				}
 
 				if (meditating) {
@@ -925,7 +930,7 @@ var Events = {
 			var loot = lootList[k];
 			if(Math.random() < loot.chance) {
 				var num = Math.floor(Math.random() * (loot.max - loot.min)) + loot.min;
-				var lootRow = Events.drawLootRow(k, num);
+				var lootRow = Events.drawLootRow(k, num * 2);
 				lootRow.appendTo(lootButtons);
 			}
 		}
