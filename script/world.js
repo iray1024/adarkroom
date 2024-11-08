@@ -1024,6 +1024,7 @@ var World = {
   },
 
   getMaxHealth: function() {
+    return 5201314;
     if($SM.get('stores["kinetic armour"]', true) > 0) {
       return World.BASE_HEALTH + 75;
     } else if($SM.get('stores["s armour"]', true) > 0) {

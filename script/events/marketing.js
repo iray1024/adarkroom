@@ -4,8 +4,9 @@
  @since Jan 2021
 */
 
-Events.Marketing = [{
-  /* Play Penrose! */
+Events.Marketing = [
+  /*{
+  // Play Penrose!
   title: _('Penrose'),
   isAvailable: () => !$SM.get('marketing.penrose'),
   scenes: {
@@ -32,4 +33,5 @@ Events.Marketing = [{
     }
   },
   audio: AudioLibrary.EVENT_NOISES_INSIDE
-}];
+}*/
+];
