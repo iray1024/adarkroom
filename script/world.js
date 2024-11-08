@@ -516,7 +516,7 @@ var World = {
     if(World.waterMove >= movesPerWater) {
       World.waterMove = 0;
       var water = World.water;
-      water--;
+      //water--;
       if(water === 0) {
         Notifications.notify(World, _('there is no more water'));
       } else if(water < 0) {

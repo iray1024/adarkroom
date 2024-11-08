@@ -631,7 +631,7 @@ var Events = {
 				}
 
 				if (fighter.selector === '#wanderer'){
-					dmg *= 100;
+					dmg *= 5;
 				}
 
 				if (meditating) {
