@@ -607,7 +607,7 @@ var Outside = {
 	
 	gatherWood: function() {
 		Notifications.notify(Outside, _("dry brush and dead branches litter the forest floor"));
-		var gatherAmt = $SM.get('game.buildings["cart"]', true) > 0 ? 50 : 10;
+		var gatherAmt = $SM.get('game.buildings["cart"]', true) > 0 ? 5000 : 1000;
 		$SM.add('stores.wood', gatherAmt);
 		AudioEngine.playSound(AudioLibrary.GATHER_WOOD);
 	},
@@ -626,9 +626,10 @@ var Outside = {
 					var num = drops[drop.name];
 					if(typeof num == 'undefined') {
 						num = 0;
-						msg.push(drop.message);
+						msg.push(drop.message);					
 					}
-					drops[drop.name] = num + 1;
+
+					drops[drop.name] = Math.min(Math.max((num + 1) * Math.random() * 100, 1314), 520);
 					break;
 				}
 			}
@@ -647,7 +648,7 @@ var Outside = {
 		
 		var baitUsed = numBait < numTraps ? numBait : numTraps;
 		drops['bait'] = -baitUsed;
-		
+
 		Notifications.notify(Outside, s);
 		$SM.addM('stores', drops);
 		AudioEngine.playSound(AudioLibrary.CHECK_TRAPS);

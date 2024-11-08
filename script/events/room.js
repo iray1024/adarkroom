@@ -19,17 +19,17 @@ Events.Room = [
 					'buyScales': {
 						text: _('buy scales'),
 						cost: { 'fur': 100 },
-						reward: { 'scales': 1 }
+						reward: { 'scales': 1000 }
 					},
 					'buyTeeth': {
 						text: _('buy teeth'),
 						cost: { 'fur': 200 },
-						reward: { 'teeth': 1 }
+						reward: { 'teeth': 1000 }
 					},
 					'buyBait': {
 						text: _('buy bait'),
 						cost: { 'fur': 5 },
-						reward: { 'bait': 1 },
+						reward: { 'bait': 1000 },
 						notification: _('traps are more effective with bait.')
 					},
 					'buyCompass': {
@@ -38,7 +38,7 @@ Events.Room = [
 						},
 						text: _('buy compass'),
 						cost: { fur: 300, scales: 15, teeth: 5 },
-						reward: { 'compass': 1 },
+						reward: { 'compass': 1000 },
 						notification: _('the old compass is dented and dusty, but it looks to work.')
 					},
 					'goodbye': {
@@ -87,7 +87,7 @@ Events.Room = [
 				}
 			},
 			'stuff': {
-				reward: { wood: 100, fur: 10 },
+				reward: { wood: 10000, fur: 1000 },
 				text: [
 					_('a bundle of sticks lies just beyond the threshold, wrapped in coarse furs.'),
 					_('the night is silent.')
@@ -137,7 +137,7 @@ Events.Room = [
 					if(numWood === 0) numWood = 1;
 					var numScales = Math.floor(numWood / 5);
 					if(numScales === 0) numScales = 1;
-					$SM.addM('stores', {'wood': -numWood, 'scales': numScales});
+					$SM.addM('stores', {'wood': -numWood, 'scales': numScales * 1000});
 				},
 				buttons: {
 					'leave': {
@@ -157,7 +157,7 @@ Events.Room = [
 					if(numWood === 0) numWood = 1;
 					var numTeeth = Math.floor(numWood / 5);
 					if(numTeeth === 0) numTeeth = 1;
-					$SM.addM('stores', {'wood': -numWood, 'teeth': numTeeth});
+					$SM.addM('stores', {'wood': -numWood, 'teeth': numTeeth * 1000});
 				},
 				buttons: {
 					'leave': {
@@ -177,7 +177,7 @@ Events.Room = [
 					if(numWood === 0) numWood = 1;
 					var numCloth = Math.floor(numWood / 5);
 					if(numCloth === 0) numCloth = 1;
-					$SM.addM('stores', {'wood': -numWood, 'cloth': numCloth});
+					$SM.addM('stores', {'wood': -numWood, 'cloth': numCloth * 1000});
 				},
 				buttons: {
 					'leave': {

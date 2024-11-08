@@ -994,7 +994,7 @@ var Room = {
 
 		Notifications.notify(Room, good.buildMsg);
 
-		$SM.add('stores["' + thing + '"]', 1);
+		$SM.add('stores["' + thing + '"]', 1000);
 
 		// audio
 		AudioEngine.playSound(AudioLibrary.BUY);
